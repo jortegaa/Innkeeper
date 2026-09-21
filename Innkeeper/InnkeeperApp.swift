@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct InnkeeperApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GameListView()
         }
+        .modelContainer(for: [Game.self, Match.self])
     }
 }
